@@ -13,8 +13,8 @@ import Controleur.Controleur;
 import Modele.EtatPartie;
 import Modele.Joueur;
 import Modele.ModeJeu;
-import Modele.Navire;
 import Modele.Resultat;
+
 
 public class dessiner_bateau extends JPanel implements MouseListener, Observer  {
 	
