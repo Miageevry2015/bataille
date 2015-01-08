@@ -1,7 +1,8 @@
-/*package Vues;
+package Vues;
 
 import java.awt.Color;
 
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import Controleur.Controleur;
@@ -18,12 +19,14 @@ public class Panneau_Joueur extends JPanel {
 
 	private Joueur joueur;
 	
-	public Panneau_Joueur(Controleur cont, Joueur joueur1) {
+	private JLabel montour = new JLabel("coucou");
+	
+	public Panneau_Joueur(Controleur cont, Joueur j) {
 		
 		controleur = cont;
-		joueur = joueur1;
-		terrain= new Terrain_Jeu(controleur, joueur);
-		flote = new Flote(controleur, joueur);
+		joueur = j;
+		terrain= new Terrain_Jeu(controleur, j);
+		flote = new Flote(controleur, j);
     	
 		this.setLayout(null);	
 		this.setBounds(0, 0, 405, 405);
@@ -32,6 +35,11 @@ public class Panneau_Joueur extends JPanel {
 		this.terrain.setBounds(20, 280, 405, 405);
 		this.flote.setBounds(15, 30, 420, 230);
 		
+		montour.setBackground(Color.yellow);
+		montour.setBounds(300,90,200,15);
+	    	
+		
+	   	this.add(montour);
 		this.add(terrain);
 		this.add(flote);
 		
@@ -45,7 +53,9 @@ public class Panneau_Joueur extends JPanel {
 		return this.flote;
 	}
 	
-	
+	public JLabel getMontour(){
+			return this.montour;
+		}
+		
 	
 }
-*/
